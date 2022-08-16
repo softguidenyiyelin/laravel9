@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BackendController;
+use App\Http\Controllers\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +18,5 @@ use App\Http\Controllers\BackendController;
 Route::get('/', function () {
     return view('backendTemplate');
 });
+
+Route::resource('categories',CategoryController::class);

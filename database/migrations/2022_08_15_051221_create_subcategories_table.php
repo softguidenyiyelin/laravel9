@@ -13,12 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('subcategories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedBigInteger('category_id'); // cid လို့ရေးရင် relationship ပြန်ချိတ်ပေးရ
             $table->timestamps();
-            $table->softDeletes();
+            $table->foreign('category_id')
+                  ->references('id')->on('categories')
+                  ->onDelete('cascade'); // relationship ချိတ်ဆက်ပုံ 
 
+            $table->softDeletes();
         });
     }
 
@@ -29,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('subcategories');
     }
 };

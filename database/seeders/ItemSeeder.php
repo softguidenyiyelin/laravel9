@@ -15,23 +15,22 @@ class ItemSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('items')->truncate();
         DB::table('items')->insert([
             [
-                'id'          => 1,
-                'code_no'     => 'P-001',
-                'name'        => 'Oishi',
-                'category_id' => '1',
-                'photo'       => '',
-                'price'       => '300',
+                'id'             => 1,
+                'code_no'        => 'P-001',
+                'name'           => 'Oishi',
+                'subcategory_id' => 1,
+                'photo'          => '',
+                'price'          => '300',
             ],
             [
-                'id'          => 2,
-                'code_no'     => 'P-002',
-                'name'        => 'Good Morning',
-                'category_id' => '1',
-                'photo'       => '',
-                'price'       => '500',
+                'id'             => 2,
+                'code_no'        => 'P-002',
+                'name'           => 'Good Morning',
+                'subcategory_id' => 2,
+                'photo'          => '',
+                'price'          => '500',
             ],
         ]);
     }
