@@ -1,310 +1,519 @@
 @extends('backendTemplate')
 @section('content')
 <div class="container-fluid">
-
-    <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-    </div>
-
-    <!-- Content Row -->
     <div class="row">
-
-        <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Earnings (Monthly)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+              <div class="col-sm-6">
+                <h3 class="mb-0 font-weight-bold">Kenneth Osborne</h3>
+                <p>Your last login: 21h ago from newzealand.</p>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center justify-content-md-end">
+                  <div class="mb-3 mb-xl-0 pr-1">
+                      <div class="dropdown">
+                        <button class="btn bg-white btn-sm dropdown-toggle btn-icon-text border mr-2" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="typcn typcn-calendar-outline mr-2"></i>Last 7 days
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3" data-x-placement="top-start">
+                          <h6 class="dropdown-header">Last 14 days</h6>
+                          <a class="dropdown-item" href="#">Last 21 days</a>
+                          <a class="dropdown-item" href="#">Last 28 days</a>
                         </div>
-                        <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
+                      </div>
+                  </div>
+                  <div class="pr-1 mb-3 mr-2 mb-xl-0">
+                    <button type="button" class="btn btn-sm bg-white btn-icon-text border"><i class="typcn typcn-arrow-forward-outline mr-2"></i>Export</button>
+                  </div>
+                  <div class="pr-1 mb-3 mb-xl-0">
+                    <button type="button" class="btn btn-sm bg-white btn-icon-text border"><i class="typcn typcn-info-large-outline mr-2"></i>info</button>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-
-        <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Earnings (Annual)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                        </div>
+            <div class="row  mt-3">
+              <div class="col-xl-5 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Sessions by Channel</h4>
                     </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div id="circleProgress6" class="progressbar-js-circle rounded p-3"></div>
+                          </div>
+                          <div class="col-lg-6">
+                            <ul class="session-by-channel-legend">
+                              <li>
+                                <div>Firewalls(3)</div>
+                                <div>4(100%)</div>
+                              </li>
+                              <li>
+                                <div>Ports(12)</div>
+                                <div>12(100%)</div>
+                              </li>
+                              <li>
+                                <div>Servers(233)</div>
+                                <div>2(100%)</div>
+                              </li>
+                              <li>
+                                <div>Firewalls(3)</div>
+                                <div>7(100%)</div>
+                              </li>
+                              <li>
+                                <div>Firewalls(3)</div>
+                                <div>6(70%)</div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+              </div>
+              <div class="col-xl-3 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Events</h4>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="d-flex justify-content-between mb-md-5 mt-3">
+                              <div class="small">Critical</div>
+                              <div class="text-danger small">Error</div>
+                              <div  class="text-warning small">Warning</div>
                             </div>
-                            <div class="row no-gutters align-items-center">
-                                <div class="col-auto">
-                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                </div>
-                                <div class="col">
-                                    <div class="progress progress-sm mr-2">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
+                            <canvas id="eventChart"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Device stats</h4>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="d-flex justify-content-between mb-4">
+                              <div>Uptime</div>
+                              <div class="text-muted">195 Days, 8 hours</div>
                             </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div>First Seen</div>
+                              <div class="text-muted">23 Sep 2019, 2.04PM</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div>Collected time</div>
+                              <div class="text-muted">23 Sep 2019, 2.04PM</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div>Memory space</div>
+                              <div class="text-muted">168.3GB</div>
+                            </div>
+                            <div class="progress progress-md mt-4">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="col-auto">
-                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-
-        <!-- Pending Requests Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Pending Requests</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Content Row -->
-
-    <div class="row">
-
-        <!-- Area Chart -->
-        <div class="col-xl-8 col-lg-7">
-            <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                    <div class="dropdown no-arrow">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                            <div class="dropdown-header">Dropdown Header:</div>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                    <div class="chart-area">
-                        <canvas id="myAreaChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pie Chart -->
-        <div class="col-xl-4 col-lg-5">
-            <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                    <div class="dropdown no-arrow">
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                            <div class="dropdown-header">Dropdown Header:</div>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                    <div class="chart-pie pt-4 pb-2">
-                        <canvas id="myPieChart"></canvas>
-                    </div>
-                    <div class="mt-4 text-center small">
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-primary"></i> Direct
-                        </span>
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> Social
-                        </span>
-                        <span class="mr-2">
-                            <i class="fas fa-circle text-info"></i> Referral
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Content Row -->
-    <div class="row">
-
-        <!-- Content Column -->
-        <div class="col-lg-6 mb-4">
-
-            <!-- Project Card Example -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                </div>
-                <div class="card-body">
-                    <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
-                    <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Color System -->
             <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-primary text-white shadow">
-                        <div class="card-body">
-                            Primary
-                            <div class="text-white-50 small">#4e73df</div>
-                        </div>
+              <div class="col-xl-3 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Sessions by Channel</h4>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-success text-white shadow">
-                        <div class="card-body">
-                            Success
-                            <div class="text-white-50 small">#1cc88a</div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="font-weight-medium">Empolyee Name</div>
+                              <div class="font-weight-medium">This Month</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Connor Chandler</div>
+                              <div class="small">$ 4909</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Russell Floyd</div>
+                              <div class="small">$857</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Douglas White</div>
+                              <div class="small">$612   </div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Alta Fletcher </div>
+                              <div class="small">$233</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Marguerite Pearson</div>
+                              <div class="small">$233</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Leonard Gutierrez</div>
+                              <div class="small">$35</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                              <div class="text-secondary font-weight-medium">Helen Benson</div>
+                              <div class="small">$43</div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="text-secondary font-weight-medium">Helen Benson</div>
+                                <div class="small">$43</div>
+                              </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-info text-white shadow">
-                        <div class="card-body">
-                            Info
-                            <div class="text-white-50 small">#36b9cc</div>
+              </div>
+              <div class="col-xl-6 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Sales Analytics</h4>
+                      <button type="button" class="btn btn-sm btn-light">Month</button>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="d-md-flex mb-4">
+                          <div class="mr-md-5 mb-4">
+                            <h5 class="mb-1"><i class="typcn typcn-globe-outline mr-1"></i>Online</h5>
+                            <h2 class="text-primary mb-1 font-weight-bold">23,342</h2>
+                          </div>
+                          <div class="mr-md-5 mb-4">
+                            <h5 class="mb-1"><i class="typcn typcn-archive mr-1"></i>Offline</h5>
+                            <h2 class="text-secondary mb-1 font-weight-bold">13,221</h2>
+                          </div>
+                          <div class="mr-md-5 mb-4">
+                            <h5 class="mb-1"><i class="typcn typcn-tags mr-1"></i>Marketing</h5>
+                            <h2 class="text-warning mb-1 font-weight-bold">1,542</h2>
+                          </div>
                         </div>
+                        <canvas id="salesanalyticChart"></canvas>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-warning text-white shadow">
-                        <div class="card-body">
-                            Warning
-                            <div class="text-white-50 small">#f6c23e</div>
+              </div>
+              <div class="col-xl-3 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Card Title</h4>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="mb-5">
+                          <div class="mr-1">
+                            <div class="text-info mb-1">
+                              Total Earning
+                            </div>
+                            <h2 class="mb-2 mt-2 font-weight-bold">287,493$</h2>
+                            <div class="font-weight-bold">
+                              1.4%  Since Last Month
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="mr-1">
+                            <div class="text-info mb-1">
+                              Total Earning
+                            </div>
+                            <h2 class="mb-2 mt-2  font-weight-bold">87,493</h2>
+                            <div class="font-weight-bold">
+                              5.43%  Since Last Month
+                            </div>
+                          </div>
                         </div>
+                        <canvas id="barChartStacked"></canvas>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-danger text-white shadow">
-                        <div class="card-body">
-                            Danger
-                            <div class="text-white-50 small">#e74a3b</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-secondary text-white shadow">
-                        <div class="card-body">
-                            Secondary
-                            <div class="text-white-50 small">#858796</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-light text-black shadow">
-                        <div class="card-body">
-                            Light
-                            <div class="text-black-50 small">#f8f9fc</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card bg-dark text-white shadow">
-                        <div class="card-body">
-                            Dark
-                            <div class="text-white-50 small">#5a5c69</div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-
-        </div>
-
-        <div class="col-lg-6 mb-4">
-
-            <!-- Illustrations -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
-                </div>
-                <div class="card-body">
-                    <div class="text-center">
-                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="img/undraw_posting_photo.svg" alt="...">
+            <div class="row">
+              <div class="col-lg-12 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">E-Commerce Analytics</h4>
                     </div>
-                    <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                        constantly updated collection of beautiful svg images that you can use
-                        completely free and without attribution!</p>
-                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                        unDraw &rarr;</a>
+                    <div class="row">
+                      <div class="col-lg-9">
+                        <div class="d-sm-flex justify-content-between">
+                          <div class="dropdown">
+                            <button class="btn bg-white btn-sm dropdown-toggle btn-icon-text pl-0" type="button" id="dropdownMenuSizeButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Mon,1 Oct 2019 - Tue,2 Oct 2019
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton4" data-x-placement="top-start">
+                              <h6 class="dropdown-header">Mon,17 Oct 2019 - Tue,25 Oct 2019</h6>
+                              <a class="dropdown-item" href="#">Tue,18 Oct 2019 - Wed,26 Oct 2019</a>
+                              <a class="dropdown-item" href="#">Wed,19 Oct 2019 - Thu,26 Oct 2019</a>
+                            </div>
+                          </div>
+                          <div>
+                            <button type="button" class="btn btn-sm btn-light mr-2">Day</button>
+                            <button type="button" class="btn btn-sm btn-light mr-2">Week</button>
+                            <button type="button" class="btn btn-sm btn-light">Month</button>
+                          </div>
+                        </div>
+                        <div class="chart-container mt-4">
+                          <canvas id="ecommerceAnalytic"></canvas>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div>
+                          <div class="d-flex justify-content-between mb-3">
+                            <div class="text-success font-weight-bold">Inbound</div>
+                          </div>
+                          <div class="d-flex justify-content-between mb-3">
+                            <div class="font-weight-medium">Current</div>
+                            <div class="text-muted">38.34M</div>
+                          </div>
+                          <div class="d-flex justify-content-between mb-3">
+                            <div class="font-weight-medium">Average</div>
+                            <div class="text-muted">38.34M</div>
+                          </div>
+                          <div class="d-flex justify-content-between mb-3">
+                            <div class="font-weight-medium">Maximum</div>
+                            <div class="text-muted">68.14M</div>
+                          </div>
+                          <div class="d-flex justify-content-between mb-3">
+                            <div class="font-weight-medium">60th %</div>
+                            <div class="text-muted">168.3GB</div>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="mt-4">
+                          <div class="d-flex justify-content-between mb-3">
+                            <div class="text-success font-weight-bold">Outbound</div>
+                          </div>
+                          <div class="d-flex justify-content-between mb-3">
+                            <div class="font-weight-medium">Current</div>
+                            <div class="text-muted">458.77M</div>
+                          </div>
+                          <div class="d-flex justify-content-between mb-3">
+                            <div class="font-weight-medium">Average</div>
+                            <div class="text-muted">1.45K</div>
+                          </div>
+                          <div class="d-flex justify-content-between mb-3">
+                            <div class="font-weight-medium">Maximum</div>
+                            <div class="text-muted">15.50K</div>
+                          </div>
+                          <div class="d-flex justify-content-between">
+                            <div class="font-weight-medium">60th %</div>
+                            <div class="text-muted">45.5</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-
-            <!-- Approach -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+            <div class="row">
+              <div class="col-lg-4 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Sale Analysis Trend</h4>
+                    </div>
+                    <div class="mt-2">
+                      <div class="d-flex justify-content-between">
+                        <small>Order Value</small>
+                        <small>155.5%</small>
+                      </div>
+                      <div class="progress progress-md  mt-2">
+                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                    <div class="mt-4">
+                      <div class="d-flex justify-content-between">
+                        <small>Total Products</small>
+                        <small>238.2%</small>
+                      </div>
+                      <div class="progress progress-md  mt-2">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                    <div class="mt-4 mb-5">
+                      <div class="d-flex justify-content-between">
+                        <small>Quantity</small>
+                        <small>23.30%</small>
+                      </div>
+                      <div class="progress progress-md mt-2">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                    <canvas id="salesTopChart"></canvas>
+                  </div>
                 </div>
-                <div class="card-body">
-                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
-                        CSS bloat and poor page performance. Custom CSS classes are used to create
-                        custom components and custom utility classes.</p>
-                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                        Bootstrap framework, especially the utility classes.</p>
+              </div>
+              <div class="col-lg-8 d-flex grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between">
+                      <h4 class="card-title mb-3">Project status</h4>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="d-flex">
+                                <img class="img-sm rounded-circle mb-md-0 mr-2" src="{{asset('backend/images/faces/face30.png')}}" alt="profile image">
+                                <div>
+                                  <div> Company</div>
+                                  <div class="font-weight-bold mt-1">volkswagen</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              Budget
+                              <div class="font-weight-bold  mt-1">$2322 </div>
+                            </td>
+                            <td>
+                              Status
+                              <div class="font-weight-bold text-success  mt-1">88% </div>
+                            </td>
+                            <td>
+                              Deadline
+                              <div class="font-weight-bold  mt-1">07 Nov 2019</div>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-sm btn-secondary">edit actions</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex">
+                                <img class="img-sm rounded-circle mb-md-0 mr-2" src="{{asset('backend/images/faces/face31.png')}}" alt="profile image">
+                                <div>
+                                  <div> Company</div>
+                                  <div class="font-weight-bold  mt-1">Land Rover</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              Budget
+                              <div class="font-weight-bold  mt-1">$12022  </div>
+                            </td>
+                            <td>
+                              Status
+                              <div class="font-weight-bold text-success  mt-1">70% </div>
+                            </td>
+                            <td>
+                              Deadline
+                              <div class="font-weight-bold  mt-1">08 Nov 2019</div>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-sm btn-secondary">edit actions</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex">
+                                <img class="img-sm rounded-circle mb-md-0 mr-2" src="{{asset('backend/images/faces/face32.png')}}" alt="profile image">
+                                <div>
+                                  <div> Company</div>
+                                  <div class="font-weight-bold  mt-1">Bentley </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              Budget
+                              <div class="font-weight-bold  mt-1">$8,725</div>
+                            </td>
+                            <td>
+                              Status
+                              <div class="font-weight-bold text-success  mt-1">87% </div>
+                            </td>
+                            <td>
+                              Deadline
+                              <div class="font-weight-bold  mt-1">11 Jun 2019</div>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-sm btn-secondary">edit actions</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex">
+                                <img class="img-sm rounded-circle mb-md-0 mr-2" src="{{asset('backend/images/faces/face33.png')}}" alt="profile image">
+                                <div>
+                                  <div> Company</div>
+                                  <div class="font-weight-bold  mt-1">Morgan </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              Budget
+                              <div class="font-weight-bold  mt-1">$5,220 </div>
+                            </td>
+                            <td>
+                              Status
+                              <div class="font-weight-bold text-success  mt-1">65% </div>
+                            </td>
+                            <td>
+                              Deadline
+                              <div class="font-weight-bold  mt-1">26 Oct 2019</div>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-sm btn-secondary">edit actions</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="d-flex">
+                                <img class="img-sm rounded-circle mb-md-0 mr-2" src="{{asset('backend/images/faces/face34.png')}}" alt="profile image">
+                                <div>
+                                  <div> Company</div>
+                                  <div class="font-weight-bold  mt-1">volkswagen</div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              Budget
+                              <div class="font-weight-bold  mt-1">$2322 </div>
+                            </td>
+                            <td>
+                              Status
+                              <div class="font-weight-bold text-success mt-1">88% </div>
+                            </td>
+                            <td>
+                              Deadline
+                              <div class="font-weight-bold  mt-1">07 Nov 2019</div>
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-sm btn-secondary">edit actions</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-
-        </div>
-    </div>
-
 </div>
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Support\Facades\Crypt;
 
 class CategoryController extends Controller
 {
@@ -14,8 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categoies = Category::orderBy('id','DESC')->get();
-        return view('backend.category.index');
+        $categories = Category::orderBy('id','DESC')->get();
+        return view('backend.category.index',compact('categories'));
     }
 
     /**
@@ -76,7 +77,14 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'category_name' => 'required',
+        ]);
+        $categoryId = Crypt::decrypt($id);
+        $category = Category::findOrFail($categoryId);
+        $category->name = $request->category_name;
+        $category->save();
+        return redirect()->back();
     }
 
     /**
